@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Charity Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">CharityEvents</h1>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="search.html" class="nav-link">Search Events</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="loadingMessage" class="loading">Loading event details...</div>
+        
+        <section id="eventDetails" class="event-details" style="display: none;">
+            <div class="event-header">
+                <img id="eventImage" src="" alt="Event Image" class="event-detail-image">
+                <div class="event-header-info">
+                    <h2 id="eventName"></h2>
+                    <p id="eventShortDescription" class="event-short-desc"></p>
+                    <div class="event-meta-large">
+                        <span id="eventCategory" class="event-category-badge"></span>
+                        <span id="eventOrganization" class="event-org"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-content-grid">
+                <div class="event-main-content">
+                    <h3>Event Details</h3>
+                    <p id="eventFullDescription" class="event-full-desc"></p>
+                    
+                    <div class="event-info-card">
+                        <h4>Event Information</h4>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <strong>Date & Time:</strong>
+                                <span id="eventDateTime"></span>
+                            </div>
+                            <div class="info-item">
+                                <strong>Venue:</strong>
+                                <span id="eventVenue"></span>
+                            </div>
+                            <div class="info-item">
+                                <strong>Location:</strong>
+                                <span id="eventLocation"></span>
+                            </div>
+                            <div class="info-item">
+                                <strong>Ticket Price:</strong>
+                                <span id="eventTicketPrice"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-sidebar">
+                    <div class="goal-progress-card">
+                        <h4>Fundraising Goal</h4>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="progressAmount"></span> raised of 
+                                <span id="goalAmount"></span> goal
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-info-card">
+                        <h4>Ticket Information</h4>
+                        <p id="ticketAvailability"></p>
+                        <button id="registerBtn" class="register-btn">
+                            Register Now
+                        </button>
+                    </div>
+
+                    <div class="org-contact-card">
+                        <h4>Organizer Contact</h4>
+                        <p id="orgContact"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </main>
+
+    <!-- 注册模态框 -->
+    <div id="registerModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Registration</h3>
+            <p>This feature is currently under construction.</p>
+            <button class="btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/event-details.js"></script>
+</body>
+</html>

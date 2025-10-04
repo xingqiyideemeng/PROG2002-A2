@@ -665,3 +665,235 @@ select option {
     background: var(--card-bg);
     color: var(--text-primary);
 }
+/* ===== 注册模态框样式 ===== */
+#registerModal .modal-content {
+    max-width: 500px;
+    background: linear-gradient(135deg, var(--card-bg) 0%, #1a1a2e 100%);
+    border: 2px solid var(--neon-blue);
+    box-shadow: var(--glow-blue), 0 0 50px rgba(0, 243, 255, 0.2);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.modal-header h3 {
+    color: var(--neon-blue);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1rem 0;
+}
+
+.construction-animation {
+    text-align: center;
+    padding: 1rem;
+}
+
+.construction-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.construction-animation h4 {
+    color: var(--neon-yellow);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.construction-animation p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--card-border);
+}
+
+.modal-footer .btn-primary,
+.modal-footer .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    min-width: 120px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #registerModal .modal-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn-primary,
+    .modal-footer .btn-secondary {
+        width: 100%;
+    }
+    
+    .construction-icon {
+        font-size: 3rem;
+    }
+}
+/* ===== 导航栏注册按钮样式 ===== */
+.nav-register-btn {
+    background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+    color: var(--dark-bg);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-register-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-register-btn:hover::before {
+    left: 100%;
+}
+
+.nav-register-btn:hover {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-green));
+    box-shadow: var(--glow-green);
+    transform: translateY(-2px) scale(1.05);
+    color: var(--dark-bg);
+}
+
+.btn-icon {
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* 导航菜单布局调整 */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-register-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .nav-register-btn .btn-text {
+        display: none; /* 在移动端只显示图标 */
+    }
+    
+    .nav-register-btn .btn-icon {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-register-btn {
+        padding: 0.5rem;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ===== 导航栏注册模态框特定样式 ===== */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li::before {
+    content: '✓';
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+#navRegisterModal .modal-content {
+    max-width: 500px;
+    background: linear-gradient(135deg, var(--card-bg) 0%, #1a1a2e 100%);
+    border: 2px solid var(--neon-purple);
+    box-shadow: var(--glow-purple), 0 0 50px rgba(185, 103, 255, 0.2);
+}
+
+#navRegisterModal .modal-header h3 {
+    color: var(--neon-purple);
+}
+
+#navRegisterModal .construction-icon {
+    color: var(--neon-purple);
+}

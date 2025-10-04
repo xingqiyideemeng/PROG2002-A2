@@ -1,4 +1,4 @@
-/* ===== 霓虹科技风格 CSS - 保持原有功能 ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -896,4 +896,5 @@ select option {
 
 #navRegisterModal .construction-icon {
     color: var(--neon-purple);
+
 }

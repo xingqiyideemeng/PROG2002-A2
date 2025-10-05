@@ -88,3 +88,8 @@ function viewEventDetails(eventId) {
 document.addEventListener('DOMContentLoaded', () => {
     new HomePage();
 });
+
+function viewEventDetails(eventId) {
+    // 使用服务器路由而不是直接文件路径
+    window.location.href = `/event-details?id=${eventId}`;
+}
